@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jeopardy!</title>
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/final.css">
+</head>
+<body ontouchstart="">
+    <header class="header">Jeopardy!</header>
+    <main>
+        <table class="players-table">
+            <tr>
+                <th>Player</th>
+                <th><button class="request-button request-bet-button">Bet</button></th>
+                <th><button class="request-button request-answer-button">Answer</button></th>
+            </tr>
+            <template class="player-row-template">
+                <tr class="player-row">
+                    <td class="player-info">
+                        <h1 class="player-name">Name</h1>
+                        <h1 class="player-score">0</h1>
+                    </td>
+                    <td class="player-bet">0</td>
+                    <td class="player-answer-cell">
+                        <div class="player-answer"></div>
+                    </td>
+                    <td class="score-buttons">
+                        <div class="score-buttons">
+                            <button class="correct-button">Correct</button>
+                            <button class="incorrect-button">Incorrect</button>
+                        </div>
+                    </td>
+                </tr>
+            </template>
+        </table>
+    </main>
+    <script src="scripts/final.js" type="module"></script>
+</body>
+</html>

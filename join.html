@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jeopardy!</title>
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/join.css">
+</head>
+<body ontouchstart="">
+    <header id="header">Jeopardy!</header>
+
+    <div class="shade"></div>
+    <div class="join-modal modal">
+        <div class="flex-container modal-flex-container">
+            <h1>Enter your name to join:</h1>
+            <input type="text" class="name-input">
+            <button class="go-button modal-button shallow-button">Go!</button>
+        </div>
+    </div>
+
+    <main>
+        <div class="flex-container">
+            <button class="join-button big-button">Join the game!</button>
+            <div class="flex-space"></div>
+            <button class="host-button big-button">Host the game!</button>
+            <div class="flex-space"></div>
+        </div>
+    </main>
+    <script src="scripts/join.js" type="module"></script>
+</body>
+</html>

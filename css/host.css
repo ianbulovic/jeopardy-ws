@@ -1,0 +1,149 @@
+.clear-button {
+    font-size: min(10vw, 120px) !important;
+    height: 150px !important;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.center-area {
+    height: calc(100% - 335px);
+    flex: 1;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+
+.players-area {
+    flex-direction: row;
+    align-items: center;
+    height: 120px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    justify-content: space-between;
+}
+
+.player-card {
+    background-color: var(--bg3);
+    width: 250px;
+    flex: none;
+}
+
+.player-name {
+    font-weight: bold;
+    text-align: center;
+    overflow: scroll;
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+.player-points-value {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.buzz-list-area {
+    width: 280px;
+}
+
+.scrollable-buzz-list {
+    max-height: calc(100% - 90px);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap:nowrap;
+}
+
+.vertical-line {
+    width: 0;
+    border: 1px solid var(--bg2);
+}
+
+.controls-area {
+    flex: 3;
+    margin-left: 15px;
+    display: block;
+}
+
+.selected-player-name {
+    font-weight: 100;
+    font-size: 3em;
+    margin: 10px;
+}
+
+.selected-player-score {
+    font-size: min(6em, 10vh);
+    flex: 1;
+    margin: 0;
+}
+
+.kick-button {
+    background-color: rgb(128, 0, 0);
+    box-shadow: 0 9px rgb(60, 0, 0);
+}
+
+.kick-button:active {
+    box-shadow: 0 5px rgb(60, 0, 0);
+}
+
+.score-buttons-grid, .score-button-controls-grid, .additional-controls-grid {
+    display: grid;
+    grid-auto-flow: column;
+    gap: min(30px, 1vw);
+    align-self: center;
+}
+
+.score-button {
+    width: min(150px, 10vw);
+    font-size: min(3em, 3vw);
+}
+
+.score-button-controls-grid, .additional-controls-grid {
+    margin-top: 30px;
+}
+
+.add-button, .subtract-button {
+    width: 50px;
+    font-weight: bold;
+}
+
+.double-button, .kick-button, .request-bet-button {
+    padding: 0px 10px;
+    width: fit-content;
+    font-size: min(2em, 3vw);
+}
+
+.player-controls-flexbox {
+    /* display: flex; */
+    display: none;
+}
+
+.qr-code {
+    /* display: none; */
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+img {
+    height: 100%;
+}
+
+.final-jeopardy-button {
+    padding: 0px 10px;
+    width: fit-content;
+    font-size: min(30pt, 3vw);
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    height: 55px;
+    background-color: rgb(90, 0, 128);
+    box-shadow: 0 9px rgb(20, 0, 60);
+}
+
+.final-jeopardy-button:active {
+    box-shadow: 0 5px rgb(20, 0, 60);
+}

@@ -1,0 +1,18 @@
+.flex-space{
+    flex:0.5; 
+}
+h1 {
+    margin: 10px 0px;
+}
+.join-modal {
+    top: 33%;
+    left: 15%;
+    width: 70%;
+    min-width: 100px;
+}
+.go-button {
+    margin-top: 10px;
+}
+button.big-button {
+    font-size: 10vw;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jeopardy!</title>
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/buzzer.css">
+</head>
+<body ontouchstart="">
+    <header id="header">Jeopardy!</header>
+
+    <div class="shade"></div>
+    <div class="bet-modal modal">
+        <div class="flex-container modal-flex-container">
+            <h1>Enter your bet:</h1>
+            <form class="bet-form flex-container">
+                <input type="number" inputmode="numeric" pattern="\d*" value="0" min="0" max="1000" class="bet-input" required>
+                <br>
+                <input type="submit" value="Submit" class="submit-button modal-button shallow-button">
+            </form>
+        </div>
+    </div>
+
+    <div class="answer-modal modal">
+        <div class="flex-container modal-flex-container">
+            <h1>Enter your answer:</h1>
+            <form class="answer-form flex-container">
+                <input class="answer-input" required>
+                <br>
+                <input type="submit" value="Submit" class="submit-button modal-button shallow-button">
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <div class="flex-container main-flex-area">
+            <h1 class="score-display">0</h1>
+            <button class="buzzer big-button">BUZZ</button>
+            <div class="flex-space"></div>
+        </div>
+    </main>
+    <script src="scripts/buzzer.js" type="module"></script>
+</body>
+</html>
