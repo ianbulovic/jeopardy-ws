@@ -306,7 +306,10 @@ async def handle_request_bet(client, target_client_name):
         await send_event(get_client_by_id(target_client_id), lambda: request_bet_event(SCORES[target_client_id]))
 
 async def handle_request_all_bets(client):
-    await asyncio.gather(*[send_event(get_client_by_id(target_client_id), lambda: request_bet_event(SCORES[target_client_id])) for target_client_id in PLAYERS])
+    def req_func(id):
+        return lambda: request_bet_event(SCORES[id])
+    
+    await asyncio.gather(*[send_event(get_client_by_id(target_client_id), req_func(target_client_id)) for target_client_id in PLAYERS])
 
 async def handle_submit_bet(client, bet):
     logging.info(f"bet submitted: {NAMES[client.id.hex]} bet {bet}")
