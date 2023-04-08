@@ -76,6 +76,7 @@ var connectToWS = () => {
                 websocket.send(JSON.stringify({"token": token}))
             };
 
+            // reconnect to websocket if the connection is closed
             websocket.onclose = (event) => {
                 setTimeout(connectToWS, 1000);
             };
@@ -122,5 +123,10 @@ var connectToWS = () => {
     xhr.open("GET", "ws", true);
     xhr.send();
 };
+
+// reload the page if it changes visiblity
+document.addEventListener("visibilitychange", (event) => {
+    window.location.reload();
+});
 
 connectToWS();
