@@ -71,7 +71,9 @@ h1 {
 .selected-player-name {
     font-weight: 100;
     font-size: 3em;
-    margin: 10px;
+    margin: 10px auto;
+    max-width: 70vw;
+    overflow: scroll;
 }
 
 .selected-player-score {

@@ -64,7 +64,7 @@ window.addEventListener("DOMContentLoaded", () => {
         for (let name of buzzList) {
             let clone = buzzListItemTemplate.content.cloneNode(true);
             let buttonElement = clone.querySelector(".player-card");
-            buttonElement.innerHTML = name;
+            buttonElement.querySelector(".player-name").innerHTML = name;
             buzzListElement.appendChild(clone);
 
             buttonElement.onclick = (event) => {
