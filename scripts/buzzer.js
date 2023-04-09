@@ -28,7 +28,6 @@ window.addEventListener("DOMContentLoaded", () => {
         buzzer.style["box-shadow"] = "0 5px var(--bg1)";
         buzzer.style["background"] = "rgb(34,29,132)";
         buzzer.style["color"] = "rgb(181, 186, 196)";
-        console.log("Buzzer locked.");
     };
 
     var unlockBuzzer = () => {
@@ -37,7 +36,6 @@ window.addEventListener("DOMContentLoaded", () => {
         buzzer.style["box-shadow"] = "0 15px var(--bg1)";
         buzzer.style["background"] = "var(--bg2)";
         buzzer.style["color"] = "var(--fg0)";
-        console.log("Buzzer unlocked.");
     };
 
     buzzer.onclick = (event) => {
