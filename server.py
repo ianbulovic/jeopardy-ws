@@ -185,7 +185,7 @@ def handle_disconnection(client):
     if client.id.hex in BUZZ_LIST:
         BUZZ_LIST.remove(client.id.hex)
         broadcast_event(buzz_event)
-    broadcast_event(connection_event)
+    # broadcast_event(connection_event)
 
 # redirect a client to a different url
 async def redirect_client(client, url):
