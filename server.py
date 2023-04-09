@@ -238,11 +238,15 @@ async def handle_host_event(client):
     logging.info("Host has joined the game")
     await redirect_client(client, "host")
 
-def handle_client_buzz(client):
+async def handle_client_buzz(client):
     if client.id.hex not in BUZZ_LIST:
         logging.info(f"buzz: {NAMES[client.id.hex]} buzzed")
         BUZZ_LIST.append(client.id.hex)
-        broadcast_event(buzz_event)
+        # notify the host and the relevant player
+        await asyncio.gather(
+            send_event(get_client_by_id(HOST), buzz_event),
+            send_event(client, buzz_event),
+        )
 
 def handle_clear_buzzers(client):
     if not client.id.hex == HOST:
@@ -338,7 +342,7 @@ async def jeopardy(client):
             elif action == "host":
                 await handle_host_event(client)
             elif action == "buzz":
-                handle_client_buzz(client)
+                await handle_client_buzz(client)
             elif action == "clearBuzzers":
                 handle_clear_buzzers(client)
             elif action == "changeScore":
