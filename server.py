@@ -1,13 +1,22 @@
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#     "aiohttp",
+#     "pillow",
+#     "qrcode",
+#     "websockets",
+# ]
+# ///
 import asyncio
 import json
 import logging
 import subprocess
-import websockets
-from uuid import UUID
 import time
-from aiohttp import web
-import qrcode
+from uuid import UUID
 
+import qrcode
+import websockets
+from aiohttp import web
 
 WEB_PORT = 8000
 WS_PORT = 8001
@@ -180,7 +189,7 @@ def handle_disconnection(client):
     if client.id.hex in NAMES.keys():
         logging.debug(f"disconnection: {NAMES[client.id.hex]} disconnected from ws")
     elif client.id.hex == HOST:
-        logging.debug(f"disconnection: the host disconnected from ws")
+        logging.debug("disconnection: the host disconnected from ws")
     CONNECTIONS.remove(client)
     if client.id.hex in BUZZ_LIST:
         BUZZ_LIST.remove(client.id.hex)
@@ -252,7 +261,7 @@ def handle_clear_buzzers(client):
     if not client.id.hex == HOST:
         logging.error("clear buzzers request denied: only the host can clear the buzzers")
         return
-    logging.info(f"buzzers cleared by host")
+    logging.info("buzzers cleared by host")
     BUZZ_LIST.clear()
     broadcast_event(buzz_event)
 
@@ -365,9 +374,9 @@ async def jeopardy(client):
         if client.id.hex in NAMES.keys():
             logging.error(f"connection error: {NAMES[client.id.hex]} disconnected unexpectedly")
         elif client.id.hex == HOST:
-            logging.error(f"connection error: the host disconnected unexpectedly")
+            logging.error("connection error: the host disconnected unexpectedly")
         else:
-            logging.error(f"connection error: an unknown client disconnected unexpectedly")
+            logging.error("connection error: an unknown client disconnected unexpectedly")
             
     finally:
         # client disconnects
