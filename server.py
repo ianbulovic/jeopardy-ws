@@ -1,12 +1,3 @@
-# /// script
-# requires-python = ">=3.12"
-# dependencies = [
-#     "aiohttp",
-#     "pillow",
-#     "qrcode",
-#     "websockets",
-# ]
-# ///
 import asyncio
 import json
 import logging
