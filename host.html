@@ -1,71 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Jeopardy!</title>
-    <link rel="stylesheet" href="css/globals.css">
-    <link rel="stylesheet" href="css/host.css">
-</head>
-<body ontouchstart="">
+    <link rel="stylesheet" href="css/globals.css" />
+    <link rel="stylesheet" href="css/host.css" />
+  </head>
+  <body ontouchstart="">
     <header class="header">
-        Jeopardy!
-        <button class="final-jeopardy-button">Final Jeopardy</button>
+      Jeopardy!
+      <button class="final-jeopardy-button">Final Jeopardy</button>
     </header>
     <main>
-        <button class="big-button clear-button">Clear Buzzers</button>
-        <hr>
-        <div class="center-area flex-container">
-            <div class="buzz-list-area">
-                <h1>Buzzes</h1>
-                <div class="scrollable-buzz-list">
-                    <template class="buzz-list-item-template">
-                        <button class="box player-card">
-                            <div class="player-name">
-                                Player
-                            </div>
-                        </button>
-                    </template>
-                </div>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="controls-area">
-                <div class="qr-code">
-                    <img src="images/qr.png">
-                </div>
-                <div class="flex-container player-controls-flexbox">
-                    <h1 class="selected-player-name">Ian</h1>
-                    <h1 class="selected-player-score">600</h1>
-                    <div class="score-buttons-grid">
-                        <button class="score-button score-button-1">200</button>
-                        <button class="score-button score-button-2">400</button>
-                        <button class="score-button score-button-3">600</button>
-                        <button class="score-button score-button-4">800</button>
-                        <button class="score-button score-button-5">1000</button>
-                        <button class="score-button score-button-custom">0</button>
-                    </div>
-                    <div class="score-button-controls-grid">
-                        <button class="add-button">+</button>
-                        <button class="subtract-button">⎻</button>
-                        <button class="double-button">Toggle double jeopardy</button>
-                    </div>
-                    <div class="additional-controls-grid">
-                        <button class="request-bet-button">Request bet</button>
-                        <button class="kick-button">Kick player</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="players-area flex-container">
-            <template class="player-card-template">
-                <button class="box player-card">
-                    <div class="player-name">Player</div>
-                    <div class="player-points-value">0</div>
-                </button>
+      <button class="big-button clear-button">Clear Buzzers</button>
+      <hr />
+      <div class="center-area flex-container">
+        <div class="buzz-list-area">
+          <h1>Buzzes</h1>
+          <div class="scrollable-buzz-list">
+            <template class="buzz-list-item-template">
+              <button class="box player-card">
+                <div class="player-name">Player</div>
+              </button>
             </template>
+          </div>
         </div>
+        <div class="vertical-line"></div>
+        <div class="controls-area">
+          <div class="qr-code">
+            <img src="images/qr.png" />
+          </div>
+          <div class="flex-container player-controls-flexbox">
+            <h1 class="selected-player-name">Ian</h1>
+            <h1 class="selected-player-score">600</h1>
+            <div class="score-buttons-grid">
+              <button class="score-button score-button-1">200</button>
+              <button class="score-button score-button-2">400</button>
+              <button class="score-button score-button-3">600</button>
+              <button class="score-button score-button-4">800</button>
+              <button class="score-button score-button-5">1000</button>
+              <button class="score-button score-button-custom">0</button>
+            </div>
+            <div class="score-button-controls-grid">
+              <button class="add-button">+</button>
+              <button class="subtract-button">⎻</button>
+              <button class="double-button">Toggle double jeopardy</button>
+            </div>
+            <div class="additional-controls-grid">
+              <button class="request-bet-button">Request bet</button>
+              <button class="kick-button">Kick player</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="players-area flex-container">
+        <template class="player-card-template">
+          <button class="box player-card">
+            <div class="player-name">Player</div>
+            <div class="player-points-value">0</div>
+          </button>
+        </template>
+      </div>
     </main>
     <script src="scripts/host.js" type="module"></script>
-</body>
+  </body>
 </html>
